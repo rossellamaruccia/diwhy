@@ -18,10 +18,20 @@
                 text-align: center;
                 color: aliceblue;
                 font-family: 'roboto condensed', sans-serif;
-                background-image: url(C:\Users\All-B\Desktop\GitHub\diwhy\img\index_header.jpg);
-                
+                background-image: url(img/index_header.jpg);
             }
 
             h1 {
                 font-family: 'roboto condensed', sans-serif;
+            }
+
+            #contacts_header {
+                background-image: url(img/contact_header.jpg);
+                background-size: contain;
+                background-position: center;
+                }
+            
+            #abouts_header {
+                background-image: url(img/about_header.jpg);
+                background-size: cover;
             }
