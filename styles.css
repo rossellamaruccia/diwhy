@@ -1,0 +1,27 @@
+            body {
+                background-color: rgba(238, 130, 238, 0.3);
+                font-family: 'roboto mono', monospace;
+                padding: 0.5em;
+            }
+
+            nav {
+                border-color: black;
+                border-style: dotted;
+                padding: 1em;
+                margin-bottom: 1em;
+            }
+
+            
+
+            header {
+                padding: 9%;
+                text-align: center;
+                background-image:url(/img/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg);
+                color: aliceblue;
+                font-family: 'roboto condensed', sans-serif;
+                
+            }
+
+            h1 {
+                font-family: 'roboto condensed', sans-serif;
+            }
