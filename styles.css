@@ -2,6 +2,8 @@
                 background-color: rgba(238, 130, 238, 0.3);
                 font-family: 'roboto mono', monospace;
                 padding: 0.5em;
+                margin: 0 auto;
+                    /*shortcut to align things*/
             }
 
             nav {
@@ -9,16 +11,14 @@
                 border-style: dotted;
                 padding: 1em;
                 margin-bottom: 1em;
-            }
-
-            
+            }            
 
             header {
                 padding: 9%;
                 text-align: center;
-                background-image:url(/img/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg);
                 color: aliceblue;
                 font-family: 'roboto condensed', sans-serif;
+                background-image: url(C:\Users\All-B\Desktop\GitHub\diwhy\img\index_header.jpg);
                 
             }
 
