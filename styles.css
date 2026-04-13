@@ -4,17 +4,10 @@
                 padding: 0.5em;
                 margin: 0 auto;
                     /*shortcut to align things*/
-            }
-
-            nav {
-                border-color: black;
-                border-style: dotted;
-                padding: 1em;
-                margin-bottom: 1em;
-            }            
+            }        
 
             header {
-                padding: 9%;
+                padding: 7%;
                 text-align: center;
                 color: aliceblue;
                 font-family: 'roboto condensed', sans-serif;
@@ -25,13 +18,28 @@
                 font-family: 'roboto condensed', sans-serif;
             }
 
+            h1:hover {
+                color:#6A547D;
+            }
+
             #contacts_header {
                 background-image: url(img/contact_header.jpg);
-                background-size: contain;
+                background-size: cover;
                 background-position: center;
                 }
             
             #abouts_header {
                 background-image: url(img/about_header.jpg);
                 background-size: cover;
+            }
+
+            section img {
+                width: 20%;
+                float: inline-start;
+                margin-right: 5%;
+            }
+
+            hr {
+                border: none;
+                border-bottom: #6A547D dotted 3px;
             }
