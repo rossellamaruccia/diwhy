@@ -1,6 +1,8 @@
             body {
                 background-color: rgba(238, 130, 238, 0.3);
                 font-family: 'roboto mono', monospace;
+                text-align: center;
+                list-style-position: inside;
                 padding: 0.5em;
                 margin: 0 auto;
                     /*shortcut to align things*/
