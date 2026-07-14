@@ -1,47 +1,58 @@
-            body {
-                background-color: rgba(238, 130, 238, 0.3);
-                font-family: 'roboto mono', monospace;
-                text-align: center;
-                list-style-position: inside;
-                padding: 0.5em;
-                margin: 0 auto;
-                    /*shortcut to align things*/
-            }        
+body {
+  background-color: rgba(238, 130, 238, 0.3);
+  font-family: "roboto mono", monospace;
+  text-align: center;
+  list-style-position: inside;
+  padding: 0.5em;
+  margin: 0 auto;
+}
 
-            header {
-                padding: 7%;
-                text-align: center;
-                color: aliceblue;
-                font-family: 'roboto condensed', sans-serif;
-                background-image: url(img/index_header.jpg);
-            }
+header {
+  padding: 7%;
+  text-align: center;
+  color: aliceblue;
+  font-family: "roboto condensed", sans-serif;
+  background-image: url(img/index_header.jpg);
+}
 
-            h1 {
-                font-family: 'roboto condensed', sans-serif;
-            }
+h1 {
+  font-family: "roboto condensed", sans-serif;
+}
 
-            h1:hover {
-                color:#6A547D;
-            }
+h1:hover {
+  color: #6a547d;
+}
 
-            #contacts_header {
-                background-image: url(img/contact_header.jpg);
-                background-size: cover;
-                background-position: center;
-                }
-            
-            #abouts_header {
-                background-image: url(img/about_header.jpg);
-                background-size: cover;
-            }
+#contacts_header {
+  background-image: url(img/contact_header.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
-            section img {
-                width: 20%;
-                float: inline-start;
-                margin-right: 5%;
-            }
+#abouts_header {
+  background-image: url(img/about_header.jpg);
+  background-size: cover;
+}
 
-            hr {
-                border: none;
-                border-bottom: #6A547D dotted 3px;
-            }
+#self {
+  max-width: 100px;
+  float: inline-end;
+  border-radius: 10px;
+  border: #6a547d dotted 3px;
+}
+
+#telly{
+    max-width: 200px;
+    float: inline-start;
+}
+
+section img {
+  width: 20%;
+  float: inline-start;
+  margin-right: 5%;
+}
+
+hr {
+  border: none;
+  border-bottom: #6a547d dotted 3px;
+}
