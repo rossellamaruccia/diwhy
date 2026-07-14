@@ -1,22 +1,42 @@
 body {
   background-color: rgba(238, 130, 238, 0.3);
   font-family: "roboto mono", monospace;
-  text-align: center;
+  text-align: justify;
   list-style-position: inside;
-  padding: 0.5em;
   margin: 0 auto;
+  height: 100vh;
 }
 
-header {
+
+#firstSection {
+  background-color: rgba(43, 58, 226, 0.728);
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+nav{
+      background-image: url(img/index_header.jpg);
+      padding: 2rem 0;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+}
+
+a {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
   padding: 7%;
-  text-align: center;
   color: aliceblue;
   font-family: "roboto condensed", sans-serif;
-  background-image: url(img/index_header.jpg);
 }
+
 
 h1 {
   font-family: "roboto condensed", sans-serif;
+  margin-top: 0;
 }
 
 h1:hover {
@@ -29,21 +49,27 @@ h1:hover {
   background-position: center;
 }
 
-#abouts_header {
+#whoSection {
   background-image: url(img/about_header.jpg);
   background-size: cover;
+  background-position: bottom;
+  margin-top: 0;
+  padding: 3rem 1rem;
 }
 
 #self {
-  max-width: 100px;
+  max-width: 200px;
   float: inline-end;
-  border-radius: 10px;
-  border: #6a547d dotted 3px;
 }
 
-#telly{
-    max-width: 200px;
-    float: inline-start;
+#telly {
+  max-width: 200px;
+  float: inline-start;
+}
+
+section{
+    background-color: #E2D67A;
+    padding: 3rem 1rem;
 }
 
 section img {
@@ -55,4 +81,19 @@ section img {
 hr {
   border: none;
   border-bottom: #6a547d dotted 3px;
+}
+
+p{
+    color: aliceblue;
+    width: 80%;
+    margin-left: 1rem;
+}
+
+footer{
+    background-color: grey;
+    padding: 1rem 1rem;
+}
+
+footer p {
+    margin-top: 0;
 }
