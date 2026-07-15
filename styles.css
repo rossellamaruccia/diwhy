@@ -10,8 +10,7 @@ body {
 
 #firstSection {
   background-color: rgba(43, 58, 226, 0.728);
-  padding: 0;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 nav{
@@ -22,15 +21,20 @@ nav{
 nav li {
   list-style: none;
   display: inline;
+
 }
 
 a {
   border: none;
   background-color: transparent;
   font-weight: 700;
-  padding: 7%;
   color: aliceblue;
   font-family: "roboto condensed", sans-serif;
+}
+
+li{
+  list-style-type: circle;
+  color: aliceblue;
 }
 
 
