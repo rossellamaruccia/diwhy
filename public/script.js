@@ -8,17 +8,16 @@ menuIcon.addEventListener("click", () => {
 const contactForm = document.getElementById("contactForm")
 const url = document.URL
 
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let fName = document.getElementById('fname')
-  let fEmail = document.getElementById('email')
-  let fMessage = document.getElementById('message')
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault()
+  let fName = document.getElementById("fname")
+  let fEmail = document.getElementById("email")
+  let fMessage = document.getElementById("message")
 
   let formData = {
     name: fName.value,
     email: fEmail.value,
-    message: fMessage.value
+    message: fMessage.value,
   }
 
   async function postForm() {
@@ -33,18 +32,18 @@ contactForm.addEventListener('submit', (e) => {
 
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`)
-        alert('something went wrong!')
+        alert("something went wrong!")
       }
 
       const result = await response.json()
-      alert('message sent!')
-      formData.email = ''
-      formData.name = ''
-      formData.message = ''
+      alert("message sent!")
+      formData.name = ""
+      formData.email = ""
+      formData.message = ""
     } catch (error) {
       console.error("Error:", error.message)
     }
   }
 
-  postForm();
+  postForm()
 })

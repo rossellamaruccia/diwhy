@@ -25,18 +25,19 @@ app.post('/', (req, res) => {
     const mailOptions = {
         from: req.body.email,
         to: process.env.EMAIL,
-        subject: 'message from: ' + req.body.name,
+        subject: 'message from: ' + req.body.email,
         message: req.body.message
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            res.send(error)
+            res.send(error.message)
         } else {
-            res.send('success')
+            res.send(info.response)
         }
     })
 })
 
 app.listen(PORT, () => {
+    console.log('listening on port ' + PORT)
 })
