@@ -8,6 +8,7 @@ menuIcon.addEventListener("click", () => {
 const contactForm = document.getElementById("contactForm")
 const url = document.URL
 
+
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   let fName = document.getElementById('fname')
