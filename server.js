@@ -31,15 +31,12 @@ app.post('/', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log('error')
             res.send(error)
         } else {
-            console.log(info.response)
             res.send('success')
         }
     })
 })
 
 app.listen(PORT, () => {
-    console.log(`Server running on port: ${PORT}`)
 })

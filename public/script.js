@@ -36,7 +36,6 @@ contactForm.addEventListener('submit', (e) => {
       }
 
       const result = await response.json()
-      console.log("Success:", result)
       alert('message sent!')
       formData.email = ''
       formData.name = ''
