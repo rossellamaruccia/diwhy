@@ -1,45 +1,57 @@
+const { app } = require("@azure/functions")
 const nodemailer = require("nodemailer")
-
 require("dotenv").config()
 
-module.exports = async function (context, req) {
-  const { name, email, message } = req.body || {}
+app.http("contact", {
+  methods: ["POST"],
+  authLevel: "anonymous",
+  handler: async (request, context) => {
+    context.log(`Processing contact form request for URL: "${request.url}"`)
 
-  if (!name || !email || !message) {
-    context.res = {
-      status: 400,
-      body: { message: "Please fill out all required fields." },
-    }
-    return
-  }
+    try {
+      const body = await request.json()
+      const { name, email, message } = body || {}
 
-  app.post("/", (req, res) => {
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASS,
-      },
-    })
-
-    const mailOptions = {
-      from: req.body.email,
-      to: process.env.EMAIL,
-      subject: "message from: " + req.body.email,
-      message: req.body.message,
-    }
-
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        res.send(error.message)
-      } else {
-        res.send(info.response)
+      if (!name || !email || !message) {
+        return {
+          status: 400,
+          jsonBody: {
+            message:
+              "Please fill out all required fields (name, email, message).",
+          },
+        }
       }
-    })
-  })
 
-  context.res = {
-    status: 200,
-    body: { message: "Thank you! Your message has been received." },
-  }
-}
+
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.EMAIL,
+          pass: process.env.PASS,
+        },
+      })
+
+      const mailOptions = {
+        from: process.env.EMAIL,
+        replyTo: email,
+        to: process.env.EMAIL,
+        subject: `Message from: ${name} (${email})`,
+        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      }
+
+      const info = await transporter.sendMail(mailOptions)
+      context.log("Email sent successfully:", info.response)
+
+      return {
+        status: 200,
+        jsonBody: { message: "Thank you! Your message has been received." },
+      }
+    } catch (error) {
+      context.error("Error sending email:", error)
+      return {
+        status: 500,
+        jsonBody: { message: "Failed to send email.", error: error.message },
+      }
+    }
+  },
+})
