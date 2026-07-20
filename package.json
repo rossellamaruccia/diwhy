@@ -4,8 +4,7 @@
   "description": "portfolio webpage by rosmaru",
   "main": "script.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
