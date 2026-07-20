@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer")
 
 
 app.http("contact", {
-  methods: ["POST"],
+  methods: ["GET", "POST", "OPTIONS"],
   authLevel: "anonymous",
   handler: async (request, context) => {
     context.log(`Processing contact form request for URL: "${request.url}"`)
@@ -21,7 +21,6 @@ app.http("contact", {
           },
         }
       }
-
 
       const transporter = nodemailer.createTransport({
         service: "gmail",
