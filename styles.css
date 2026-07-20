@@ -9,7 +9,7 @@
 }
 
 header {
-  background-image: url(img/alt-background.png);
+  background-image: url(public/img/alt-background.png);
   background-size: cover;
   position: fixed;
   top: 0rem;
@@ -96,7 +96,7 @@ li {
 
 #who {
   display: flex;
-  background-image: url(img/alt-background.png);
+  background-image: url(public/img/alt-background.png);
   background-size: cover;
   background-position: bottom;
   margin-top: 0;
@@ -184,7 +184,7 @@ p {
 }
 
 footer {
-  background-image: url(img/alt-background.png);
+  background-image: url(public/img/alt-background.png);
   padding: 2rem 1rem;
 }
 
