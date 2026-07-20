@@ -7,7 +7,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: "https://rossellamaruccia.github.io/diwhy/", // replace with your actual URL
+  origin: "https://rossellamaruccia.github.io/diwhy", // replace with your actual URL
   optionsSuccessStatus: 200,
 }
 
