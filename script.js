@@ -6,7 +6,6 @@ menuIcon.addEventListener("click", () => {
 })
 
 const contactForm = document.getElementById("contactForm")
-const url = document.URL
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault()
@@ -22,7 +21,7 @@ contactForm.addEventListener("submit", (e) => {
 
   async function postForm() {
     try {
-      const response = await fetch(url, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
