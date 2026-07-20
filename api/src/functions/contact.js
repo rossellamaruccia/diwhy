@@ -1,6 +1,6 @@
 const { app } = require("@azure/functions")
 const nodemailer = require("nodemailer")
-require("dotenv").config()
+
 
 app.http("contact", {
   methods: ["POST"],
