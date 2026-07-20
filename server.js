@@ -1,0 +1,45 @@
+const express = require('express');
+const app = express();
+const nodemailer = require('nodemailer')
+require('dotenv').config();
+
+const PORT = process.env.PORT || 5000;
+
+// middleware
+app.use(express.static('public'))
+app.use(express.json())
+
+app.get('/', (req, res) => {
+    res.send('/public')
+})
+
+app.post('/', (req, res) => {
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.PASS
+        }
+    })
+
+    const mailOptions = {
+        from: req.body.email,
+        to: 'marucciarossella@gmail.com',
+        subject: 'message from: ' + req.body.name,
+        message: req.body.message
+    }
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('error')
+            res.send(error)
+        } else {
+            console.log(info.response)
+            res.send('success')
+        }
+    })
+})
+
+app.listen(PORT, () => {
+    console.log(`Server running on port: ${PORT}`)
+})

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <title>diwhy</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="rossella maruccia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" sizes="16x16 32x32 48x48" href="./img/Animate Image.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+    <nav>
+        <a class="logo" href="#">DIWhy</a>
+
+      <ol class="navLinks">
+        <li><a href="#who">who</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#links">links</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ol>
+      <button id="menu" ><img src="img/menu_icon.png" /></button>
+      
+      <button class="visitBtn">visit GitHub</button>
+
+    </nav>
+    </header>
+
+    <section id="links">
+
+      <p>The WWW is still a place full of free resources for those who love to learn and collaborative people always keen to share what they know, and for that I cherish it so much.</p>
+      <p>I wanted to make this portfolio website the old-school way: no AI, only HTML, CSS and JS. Handcoded and constantly renewed while learning. You can check the code on <a href= "https://github.com/rossellamaruccia/diwhy/">Github</a>.</p>
+      <p>You will also find a periodically updated selection of reading recommendations and studying material, in case you are interested in the magic universe of coding.</p>
+      <p>For now, here's a short list from a humble learner to the reader about the three foundational languages of the Internet:</p>
+      <ul>
+        <li> <a href="https://youtu.be/mJgBOIoGihA?si=MIqsj6LA7zjCX5_u"> HTML </a> </li>
+        <li> <a href="https://roadmap.sh/css">CSS</a> </li>
+        <li> <a href="https://web.dev/learn/javascript">JS</a> </li>
+      </ul>
+      <p>Come back to find out my new outcomes as a developer! Links will flow soon.</p>
+    </section>
+
+    <!-- <section id="experience">
+      <div class="grid"></div>
+    </section> -->
+
+    <section id="who">
+      <div class="textCard">
+      <h1>Here I am:</h1>
+      <p>name: rossella maruccia</p>
+      <p>age: 32yo</p>
+      <p>city: Pisa, Italy</p>
+      <br />
+      <p>languages: Italian, native - English, C1 </p>
+      <p>stack: HTML, CSS, JavaScript, React, Typescript, Java, Spring, SQL</p>
+      <br />
+      <p>Head in clouds, feet on the ground</p>
+      </div>
+      <div class="imageCard">
+    <img src="img\self.png" id="self">
+    </div>
+    </section>
+
+    <section id="contact">
+      <div class="imageCard">
+    <img src="img\Animate Image.svg" id="telly"/>
+    </div>
+    <form id="contactForm">
+      <h1>contact me</h1>
+      <label for="fname">first name:</label>
+      <input type="text" id="fname" name="fname" placeholder="Merlin" required/>
+      <label for="email">email</label>
+      <input type="email" id="email" name="email" placeholder="merlinthewizard@magic.com" required />
+      <label for="message" required>your message:</label>
+      <input
+        type="textarea"
+        id="message"
+        name="message"
+        rows="10"
+        cols="30"
+        style="min-height: 10em"
+      />
+      <a target="_blank"><button type="submit" > Send </button></a>
+    </form>
+    </section>
+
+    <footer>
+      <p>&lt;&lt; &copy; made with love by rosmaru &gt;&gt;</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
