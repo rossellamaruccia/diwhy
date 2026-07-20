@@ -55,6 +55,10 @@ nav a {
   text-decoration: none;
 }
 
+#menu{
+  display: none;
+}
+
 .visitBtn{
   padding: 0.4rem 1rem;
   margin: 0 0 0 2rem;
@@ -137,12 +141,17 @@ form{
   width: 50%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 1rem;
   margin: 0 0;
 }
 
+form h1{
+  font-size: 23px;
+}
+
 input{
-  width: 80%;
+  width: 70%;
   text-align: center;
   border-radius: 10px;
   padding: 0.4rem;
@@ -155,8 +164,8 @@ form button {
 }
 
 #telly {
-  max-width: 200px;
-  margin: 0 0;
+  width: 100%;
+  margin: 0 0 0 3rem;
 }
 
 
@@ -228,8 +237,49 @@ footer p {
   font-size: 18px;
 }
 
+#telly{
+  margin: 0;
+}
+
 }
 
 @media(max-width: 619px){
-  
+  #menu{
+    display: block;
+    max-width: 25px;
+    margin: 0 1rem;
+  }
+
+  ol{
+    display: none;
+  }
+
+#whoSection {
+  padding: 4rem 0.6rem;
+}
+
+.textCard{
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.textCard p{
+  text-align: left;
+}
+
+.imageCard{
+  width: 23%;
+}
+
+#whoSection h1{
+  font-size: 18px;
+}
+
+#telly{
+  margin: 35px 0 0 0;
+}
+
+footer p{
+  font-size: 13.5px;
+  text-align: center;
+}
 }
