@@ -66,6 +66,7 @@ nav a {
   cursor: pointer;
   border-radius: 10px;
   border-color: color-mix(in hsl shorter hue, pink 50%, lightblue 50%);
+  background-color: #010223;
 }
 
 section {
