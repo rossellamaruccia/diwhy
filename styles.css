@@ -198,6 +198,7 @@ form button {
 
 #telly {
   position: absolute;
+    z-index: 1;
   max-width: 20%;
   left: 5rem;
   margin: 0 0 0 3rem;
@@ -272,11 +273,11 @@ footer p {
   }
 
     form {
-  width: 80%;
+  width: 90%;
 }
 
 #telly{
-  left: 2rem
+  left: 0.6rem
 }
 
 }
@@ -294,6 +295,7 @@ footer p {
   .navLinks {
     position: absolute;
     top: 100%;
+    right: 41%;
     margin-top: 1rem;
     width: 30%;
     padding: 1.5rem 1rem;
@@ -323,7 +325,6 @@ footer p {
     text-align: left;
   }
 
-
   #who h1 {
     font-size: 18px;
   }
@@ -333,7 +334,8 @@ footer p {
 }
 
 #telly{
-  left: 2rem
+  left: 0;
+
 }
 
   footer p {
