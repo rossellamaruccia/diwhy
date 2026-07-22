@@ -271,6 +271,14 @@ footer p {
     font-size: 18px;
   }
 
+    form {
+  width: 80%;
+}
+
+#telly{
+  left: 2rem
+}
+
 }
 
 @media (max-width: 619px) {
@@ -286,7 +294,6 @@ footer p {
   .navLinks {
     position: absolute;
     top: 100%;
-    right: 41%;
     margin-top: 1rem;
     width: 30%;
     padding: 1.5rem 1rem;
@@ -320,6 +327,14 @@ footer p {
   #who h1 {
     font-size: 18px;
   }
+
+  form {
+  width: 100%;
+}
+
+#telly{
+  left: 2rem
+}
 
   footer p {
     font-size: 13.5px;
