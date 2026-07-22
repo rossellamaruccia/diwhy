@@ -1,5 +1,7 @@
 const menuIcon = document.querySelector("#menu")
 const navLinks = document.querySelector(".navLinks")
+const validationContainer = document.getElementById("validationContainer")
+const icons = document.getElementsByClassName('icon')
 
 menuIcon.addEventListener("click", () => {
   navLinks.classList.toggle("active")
@@ -7,7 +9,7 @@ menuIcon.addEventListener("click", () => {
 
 const contactForm = document.getElementById("contactForm")
 
-contactForm.addEventListener("submit", (e) => {
+contactForm.addEventListener('submit', (e) => {
   e.preventDefault()
   let fName = document.getElementById("fname")
   let fEmail = document.getElementById("email")
@@ -19,9 +21,8 @@ contactForm.addEventListener("submit", (e) => {
     message: fMessage.value,
   }
 
-  async function postForm() {
-    try {
-      const response = await fetch("/api/contact", {
+  try {
+      const response = fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,20 +30,27 @@ contactForm.addEventListener("submit", (e) => {
         body: JSON.stringify(formData),
       })
 
-      if (!response.ok) {
+    if (!response.ok) {
+      e.preventDefault()
+      validationContainer.style.display = "block"
+      validationContainer.style.border = "1px solid red"
+      validationContainer.style.backgroundColor = "rgba(252, 0, 0, 0.58)"
+      validationContainer.innerHTML = `<small>Something went wrong, try again!</small>`
+      
         throw new Error(`Response status: ${response.status}`)
-        alert("something went wrong!")
+    } else {
+      e.preventDefault()
+        const result = response.json()
+        formData.name = ""
+        formData.email = ""
+        formData.message = ""
+        validationContainer.style.display = "block"
+        validationContainer.innerHTML = `<small>Message sent! Thank you!</small>`
       }
-
-      const result = await response.json()
-      alert("message sent!")
-      formData.name = ""
-      formData.email = ""
-      formData.message = ""
     } catch (error) {
       console.error("Error:", error.message)
     }
-  }
-
-  postForm()
 })
+
+// form validation
+const attentionIcons = document.getElementsByClassName("icon")

@@ -69,25 +69,35 @@
     </section>
 
     <section id="contact">
-      <div class="imageCard">
-    <img src="public/img/Animate Image.svg" id="telly"/>
-    </div>
+      <h1>send me a message!</h1>
     <form id="contactForm">
-      <h1>contact me</h1>
-      <label for="fname">first name:</label>
-      <input type="text" id="fname" name="fname" placeholder="Merlin" required/>
-      <label for="email">email</label>
-      <input type="email" id="email" name="email" placeholder="merlinthewizard@magic.com" required />
-      <label for="message" required>your message:</label>
-      <input
+      <div>
+        <img src="public/img/Animate Image.svg" id="telly"/>
+      </div>
+      <div class="form-control">
+        <label for="fname">first name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Merlin" required/>
+        <img class="icon" src="public/img/attention_icon.png"/>
+      </div>
+      <div class="form-control">
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" placeholder="merlinthewizard@magic.com" required/>
+        <img class="icon" src="public/img/attention_icon.png"/>
+      </div>
+      <div class="form-control">
+        <label for="message">your message:</label>
+        <input
         type="textarea"
         id="message"
         name="message"
         rows="10"
         cols="30"
         style="min-height: 10em"
-      />
-      <a target="_blank"><button type="submit" > Send </button></a>
+        required
+        />
+      </div>
+      <button type="submit" value="Submit"> Send </button>
+      <div id="validationContainer"></div>
     </form>
     </section>
 

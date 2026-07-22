@@ -134,32 +134,43 @@ li {
 }
 
 #contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   background-color: #e2d67a;
   padding: 3rem 0;
 }
 
-form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: 1rem;
-  margin: 0 0;
+#contact h1{
+  font-size: 24px;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-form h1 {
-  font-size: 23px;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0.5rem 6.5rem;
+}
+
+.form-control{
+  width: 100%;
+  position: relative;
+}
+
+label{
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 input {
-  width: 60%;
+  position: relative;
+  width: 100%;
   text-align: center;
   border-radius: 10px;
-  padding: 0.4rem;
+  padding: 0.6rem;
 }
 
 form button {
@@ -168,8 +179,27 @@ form button {
   border-radius: 10px;
 }
 
-#telly {
+.icon{
+  position: absolute;
+  right: 1rem;
+  top: 2.8rem;
+  display: none;
+}
+
+#validationContainer{
+  display: none;
   width: 100%;
+  padding: 1rem 2rem;
+  color: white;
+  border: green solid 1px;
+  border-radius: 10px;
+  background-color: rgba(1, 179, 1, 0.58);
+}
+
+#telly {
+  position: absolute;
+  max-width: 20%;
+  left: 5rem;
   margin: 0 0 0 3rem;
 }
 
@@ -241,9 +271,6 @@ footer p {
     font-size: 18px;
   }
 
-  #telly {
-    margin: 0;
-  }
 }
 
 @media (max-width: 619px) {
@@ -259,16 +286,17 @@ footer p {
   .navLinks {
     position: absolute;
     top: 100%;
-    right: 10%;
+    right: 41%;
     margin-top: 1rem;
     width: 30%;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     display: flex;
     flex-flow: column nowrap;
     line-height: 1.8rem;
     background-color: #010223cf;
     border-radius: 10px;
     text-align: center;
+    line-height: 2rem;
     display: none;
   }
 
@@ -288,16 +316,9 @@ footer p {
     text-align: left;
   }
 
-  .imageCard {
-    width: 23%;
-  }
 
   #who h1 {
     font-size: 18px;
-  }
-
-  #telly {
-    margin: 35px 0 0 0;
   }
 
   footer p {
