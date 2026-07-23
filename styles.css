@@ -295,18 +295,18 @@ footer p {
   .navLinks {
     position: absolute;
     top: 100%;
-    right: 41%;
+    right: 37%;
     margin-top: 1rem;
-    width: 30%;
-    padding: 1.5rem 1rem;
-    display: flex;
-    flex-flow: column nowrap;
-    line-height: 1.8rem;
+    width: 40%;
     background-color: #010223cf;
     border-radius: 10px;
-    text-align: center;
-    line-height: 2rem;
     display: none;
+  }
+
+  .navLinks li{
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
   }
 
   .active {
