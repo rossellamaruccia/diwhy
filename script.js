@@ -7,10 +7,7 @@ menuIcon.addEventListener("click", () => {
   navLinks.classList.toggle("active")
 })
 
-const contactForm = document.getElementById("contactForm")
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault()
+const sendMessage = async function () {
   let fName = document.getElementById("fname")
   let fEmail = document.getElementById("email")
   let fMessage = document.getElementById("message")
@@ -22,34 +19,37 @@ contactForm.addEventListener('submit', (e) => {
   }
 
   try {
-      const response = fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
 
     if (!response.ok) {
-      e.preventDefault()
       validationContainer.style.display = "block"
       validationContainer.style.border = "1px solid red"
       validationContainer.style.backgroundColor = "rgba(252, 0, 0, 0.58)"
       validationContainer.innerHTML = `<small>Something went wrong, try again!</small>`
-      
-        throw new Error(`Response status: ${response.status}`)
+      throw new Error(`Response status: ${response.status}`)
     } else {
-      e.preventDefault()
-        const result = response.json()
-        formData.name = ""
-        formData.email = ""
-        formData.message = ""
-        validationContainer.style.display = "block"
-        validationContainer.innerHTML = `<small>Message sent! Thank you!</small>`
-      }
-    } catch (error) {
-      console.error("Error:", error.message)
+      const result = response.json()
+      formData.name = ""
+      formData.email = ""
+      formData.message = ""
+      validationContainer.style.display = "block"
+      validationContainer.innerHTML = `<small>Message sent! Thank you!</small>`
     }
+  } catch (error) {
+    console.error("Error:", error.message)
+  }
+  
+}
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  sendMessage()
 })
 
 // form validation
